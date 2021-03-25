@@ -89,5 +89,17 @@
       </files>
       <bundle>true</bundle>
     </dependency>
+    <dependency>
+      <!--
+        OpenNLP, the NLP toolkit for some nature language detections, like sentence detection or POS tagger.
+      -->
+      <name>OpenNLP</name>
+      <classname>com.fasterxml.jackson.databind</classname>
+      <files>
+        <jar>https://repo1.maven.org/maven2/com/fasterxml/jackson/core/jackson-databind/2.10.1/jackson-databind-2.10.1.jar</jar>
+        <bin>http://opennlp.sourceforge.net/models-1.5/en-sent.bin</bin>
+      </files>
+      <bundle>true</bundle>
+    </dependency>
   </dependencies>
 </build>
