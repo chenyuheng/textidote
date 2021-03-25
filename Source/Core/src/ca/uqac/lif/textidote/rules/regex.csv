@@ -31,3 +31,13 @@ sh:hccha	(C|c)hapter(\s+|~)\d					Do not refer to chapters using hard-coded numb
 sh:hctab	(T|t)able(\s+|~)\d						Do not refer to tables using hard-coded numbers. Use \ref instead.
 sh:nonp		\\newpage								If you are writing a research paper, do not force page breaks.
 sh:nbsp		~[;:!\?]								N'utilisez pas d'espace insécable; c'est plutôt une espace fine qui doit être utilisée, et LaTeX se charge de l'insérer par lui-même.
+
+# CYH added
+cyh:nocct	(a few|a number of|several)				Do not use not concrete numbers, replace them with the concrete number or remove them.
+cyh:cbp		[\.,;:]\s*\\cite\{						you should put the citation before the punctuation.
+cyh:fnap	(\\footnote\{.+\}[\.,;:])|([\.,;:] \\footnote\{.+\})					you should put the footnote immediatly after the punctuation.
+cyh:bfig	(F|f)igure\s+\\ref						use the non-breaking space (~) between Figure and \ref
+cyh:bsec	(S|s)ection\s+\\ref						use the non-breaking space (~) between Section and \ref
+cyh:bcha	(C|c)hapter\s+\\ref						use the non-breaking space (~) between Chapter and \ref
+cyh:btab	(T|t)able\s+\\ref						use the non-breaking space (~) between Table and \ref
+cyh:scol	[Ss]ubsection(\s+|~)\\ref				use section with \ref only, instead of subsection etc.
