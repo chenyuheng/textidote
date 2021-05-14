@@ -228,7 +228,7 @@
   <target name="javadoc" depends="init" description="Generate the documentation">
     <mkdir dir="${build.docdir}"/>
     <mkdir dir="${build.docdir}/doc-files"/>
-    <javadoc sourcepath="${build.srcdir}"
+<!--     <javadoc sourcepath="${build.srcdir}"
              destdir="${build.docdir}"
              packagenames="*"
              excludepackagenames=""
@@ -244,7 +244,7 @@
       <bottom><![CDATA[<i>Copyright&nbsp;&#169; ]]>${build.author}<![CDATA[. All Rights Reserved.</i>]]></bottom>
       <link href="http://docs.oracle.com/javase/6/docs/api/"/>
       <classpath refid="build.classpath"/>
-    </javadoc>
+    </javadoc> -->
     <if>
       <available file="${build.srcdir}/doc-files" type="dir"/>
       <then>

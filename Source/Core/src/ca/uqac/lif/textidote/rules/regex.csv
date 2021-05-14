@@ -12,7 +12,7 @@ sh:012		\\fg\s										Utilisez '\fg{}' au lieu de '\fg'; sinon le mot suivant 
 
 sh:c:001	\w\\(cite|ref)							Add a space before citation or reference.
 sh:c:002	\\(cite|ref)\{.*?\}\s+[\.,;:]			Remove space between citation/reference and punctuation.
-sh:c:noin	\b(In|in|by|from)\s+\\cite				Do not use '$1 [X]': the syntax of a sentence should not be changed by the removal of a citation.
+sh:c:noin	\b([Ii]n|[Bb]y|[Ff]rom|[Aa]ccording to|[Aa]nd)\s+\\cite				Do not use '$1 [X]': the syntax of a sentence should not be changed by the removal of a citation.
 sh:c:mul	\\cite\s*\{.*?\}[\s,]*\\cite			Put all references in a single \cite command
 sh:c:mulp	\\cite(p|t)\s*\{.*?\}[\s,]*\\cite		Put all references in a single \cite$1 command
 
@@ -41,3 +41,5 @@ cyh:bsec	(S|s)ection\s+\\ref						use the non-breaking space (~) between Section
 cyh:bcha	(C|c)hapter\s+\\ref						use the non-breaking space (~) between Chapter and \ref
 cyh:btab	(T|t)able\s+\\ref						use the non-breaking space (~) between Table and \ref
 cyh:scol	[Ss]ubsection(\s+|~)\\ref				use section with \ref only, instead of subsection etc.
+
+cyh:nodel	\x7f									DEL character is forbidden in LaTeX.

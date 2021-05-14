@@ -27,6 +27,8 @@ import org.languagetool.Language;
 import org.languagetool.MultiThreadedJLanguageTool;
 import org.languagetool.rules.RuleMatch;
 import org.languagetool.rules.spelling.SpellingCheckRule;
+import org.languagetool.tagging.en.EnglishTagger;
+import org.languagetool.AnalyzedTokenReadings;
 
 import ca.uqac.lif.textidote.Advice;
 import ca.uqac.lif.textidote.Rule;
@@ -97,6 +99,24 @@ public class CheckLanguage extends Rule
 		{
 			m_languageTool.disableRule("WHITESPACE_RULE");
 		}
+		m_languageTool.enableRule("PASSIVE_VOICE");
+		System.out.println("PASSIVE VOICE activated");
+
+		EnglishTagger et = new EnglishTagger();
+		ArrayList<String> tl = new ArrayList();
+
+		// //String sent = "Alongside this scientific development , quantum computing is also experiencing a significant commercial growth [x] .";
+		// String sent = "In [1] , reseachers has found that people eat apples.";
+		// String[] toks = sent.split(" ");
+		// for (int i = 0; i < toks.length; i++) tl.add(toks[i]); 
+		// try {
+		// 	List<AnalyzedTokenReadings> li = et.tag(tl);
+		// 	for (int i = 0; i < li.size(); i++) {
+		// 		System.out.println(li.get(i));
+		// 	}
+		// } catch (IOException e) {
+		// 	System.out.println(e);
+		// }
 		m_dictionary = dictionary;
 		handleUserDictionary();
 	}

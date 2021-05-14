@@ -25,15 +25,15 @@ import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
+import org.languagetool.Language;
+import org.languagetool.tokenizers.SRXSentenceTokenizer;
+
 import ca.uqac.lif.textidote.Advice;
 import ca.uqac.lif.textidote.Rule;
 import ca.uqac.lif.textidote.as.AnnotatedString;
 import ca.uqac.lif.textidote.as.Position;
 import ca.uqac.lif.textidote.as.Range;
-
-import com.fasterxml.jackson.databind.exc.InvalidFormatException;
-import opennlp.tools.sentdetect.SentenceDetectorME;
-import opennlp.tools.sentdetect.SentenceModel;
+import ca.uqac.lif.textidote.rules.LanguageFactory;
 
 /**
  * Checks the number follow the right format.
@@ -46,24 +46,16 @@ public class CheckNumberWords extends Rule
 	/**
 	 * The pattern for finding numbers
 	 */
-	Pattern m_breakPattern = Pattern.compile("(-?\\d*\\.?\\d+)");
+	Pattern m_number_pattern = Pattern.compile("(-?\\d*\\.?\\d+)");
+
 	/**
-	* The sentence detector 
+	* The sentence tokenizer. 
 	*/
-	SentenceDetectorME sdetector;
-	public CheckNumberWords()
+	SRXSentenceTokenizer m_sentence_tokenizer;
+	public CheckNumberWords(Language lang)
 	{
 		super("cyh:nw");
-		try {
-			InputStream is = new FileInputStream("Source/Core/dep/en-sent.bin");
-			SentenceModel model = new SentenceModel(is);
-		 	sdetector = new SentenceDetectorME(model);
-		 	is.close();
-		} catch (InvalidFormatException e) {
-			System.out.println(e);
-		} catch (IOException e) {
-			System.out.println(e);
-		}
+		m_sentence_tokenizer = new SRXSentenceTokenizer(lang);
 	}
 
 	@Override
@@ -74,17 +66,17 @@ public class CheckNumberWords extends Rule
 		int env_level = 0;
 		for (int line_cnt = 0; line_cnt < lines.size(); line_cnt++)
 		{
-			String line = lines.get(line_cnt).replaceAll("\\s+$", "");
+			String line = lines.get(line_cnt);
 			if (line.matches(".*\\\\begin\\s*\\{\\s*(equation|equation\\*|align|align\\*|table|tabular|verbatim|lstlisting|IEEEkeywords|figure|matrix|bmatrix|Bmatrix|pmatrix|vmatrix|Vmatrix|smallmatrix).*") || line.matches(".*\\\\\\[.*"))
 			{
 				env_level++;
 			}
 			if (env_level == 0)
 			{
-				String[] sentences = sdetector.sentDetect(line);
+				List<String> sentences = m_sentence_tokenizer.tokenize(line);
 				int sentenceStartPos = 0;
-				for (int i = 0; i < sentences.length; i++) {
-					Matcher mat = m_breakPattern.matcher(sentences[i]);
+				for (int i = 0; i < sentences.size(); i++) {
+					Matcher mat = m_number_pattern.matcher(sentences.get(i));
 					boolean violation_flag = true;
 					Advice adv = null;
 					while (mat.find())
@@ -100,8 +92,8 @@ public class CheckNumberWords extends Rule
 							break;
 						}
 						if (adv == null) {
-							Position start_pos = s.getSourcePosition(new Position(line_cnt, sentenceStartPos + mat.start()));
-							Position end_pos = s.getSourcePosition(new Position(line_cnt, sentenceStartPos + mat.start() + mat.group(0).length()));
+							Position start_pos = s.getSourcePosition(new Position(line_cnt, sentenceStartPos + mat.start(0)));
+							Position end_pos = s.getSourcePosition(new Position(line_cnt, sentenceStartPos + mat.start(0) + mat.group(0).length()));
 							Range r = new Range(start_pos, end_pos);
 							adv = new Advice(this, r, "You should use English word for integers from zero to ten.", original.getResourceName(), original.getLine(start_pos.getLine()), original.getOffset(start_pos));
 						}
@@ -110,7 +102,7 @@ public class CheckNumberWords extends Rule
 					if (violation_flag && adv != null) {
 						out_list.add(adv);
 					}
-					int moveLength = sentences[i].length() + (line.length() - line.trim().length());
+					int moveLength = sentences.get(i).length();
 					sentenceStartPos += moveLength;
 					line = line.substring(moveLength);
 				}

@@ -60,6 +60,11 @@ public class Advice implements Comparable<Advice>
 	 * The line where the advice applies
 	 */
 	protected String m_line;
+
+	/**
+	 * The suggestion replacements of the advice.
+	 */
+	protected List<String> m_suggestions;
 	
 	/**
 	 * The number of characters from the beginning of the original
@@ -101,6 +106,22 @@ public class Advice implements Comparable<Advice>
 		m_replacements = null;
 		m_offset = offset;
 		m_shortMessage = "TeXtidote rule";
+	}
+
+	public Advice(/*@ non_null @*/ Rule rule, /*@ non_null @*/ Range range, 
+			/*@ non_null @*/ String message, /*@ non_null @*/ String resource,
+			/*@ non_null @*/ String line, int offset, List<String> suggestions)
+	{
+		super();
+		m_rule = rule;
+		m_range = range;
+		m_message = message;
+		m_resource = resource;
+		m_line = line;
+		m_replacements = null;
+		m_offset = offset;
+		m_shortMessage = "TeXtidote rule";
+		m_suggestions = suggestions;
 	}
 
 	/**
@@ -239,5 +260,9 @@ public class Advice implements Comparable<Advice>
 	public int getOffset()
 	{
 		return m_offset;
+	}
+
+	public List<String> getSuggestions() {
+		return m_suggestions;
 	}
 }

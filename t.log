@@ -1,0 +1,166 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/W32TeX) (preloaded format=pdflatex 2021.2.19)  14 MAY 2021 14:37
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**d:/Undergraduate/thesis/textidote/t.tex
+(d:/Undergraduate/thesis/textidote/t.tex
+LaTeX2e <2020-02-02> patch level 5
+L3 programming layer <2020-03-06> (d:/texlive/2020/texmf-dist/tex/latex/base/article.cls
+Document Class: article 2019/12/20 v1.4l Standard LaTeX document class
+(d:/texlive/2020/texmf-dist/tex/latex/base/size10.clo
+File: size10.clo 2019/12/20 v1.4l Standard LaTeX file (size option)
+)
+\c@part=\count167
+\c@section=\count168
+\c@subsection=\count169
+\c@subsubsection=\count170
+\c@paragraph=\count171
+\c@subparagraph=\count172
+\c@figure=\count173
+\c@table=\count174
+\abovecaptionskip=\skip47
+\belowcaptionskip=\skip48
+\bibindent=\dimen134
+) (d:/texlive/2020/texmf-dist/tex/generic/babel/babel.sty
+Package: babel 2020/03/22 3.42 The Babel package
+ (d:/texlive/2020/texmf-dist/tex/generic/babel/switch.def
+File: switch.def 2020/03/22 3.42 Babel switching mechanism
+) (d:/texlive/2020/texmf-dist/tex/generic/babel-english/english.ldf
+Language: english 2017/06/06 v3.3r English support from the babel system
+ (d:/texlive/2020/texmf-dist/tex/generic/babel/babel.def
+File: babel.def 2020/03/22 3.42 Babel common definitions
+\babel@savecnt=\count175
+\U@D=\dimen135
+ (d:/texlive/2020/texmf-dist/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count176
+)
+Package babel Info: \l@canadian = using hyphenrules for english
+(babel)             (\language0) on input line 102.
+Package babel Info: \l@australian = using hyphenrules for ukenglish
+(babel)             (\language4) on input line 105.
+Package babel Info: \l@newzealand = using hyphenrules for ukenglish
+(babel)             (\language4) on input line 108.
+)) (d:/texlive/2020/texmf-dist/tex/latex/tools/array.sty
+Package: array 2019/08/31 v2.4l Tabular extension package (FMi)
+\col@sep=\dimen136
+\ar@mcellbox=\box45
+\extrarowheight=\dimen137
+\NC@list=\toks15
+\extratabsurround=\skip49
+\backup@length=\skip50
+\ar@cellbox=\box46
+) (d:/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx.sty (d:/texlive/2020/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2020-03-06 L3 programming layer (loader) 
+ (d:/texlive/2020/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
+File: l3backend-pdfmode.def 2020-03-12 L3 backend support: PDF mode
+\l__kernel_color_stack_int=\count177
+\l__pdf_internal_box=\box47
+)) (d:/texlive/2020/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2020-03-06 L3 Experimental document command parser
+\l__xparse_current_arg_int=\count178
+\g__xparse_grabber_int=\count179
+\l__xparse_m_args_int=\count180
+\l__xparse_v_nesting_int=\count181
+)
+Package: siunitx 2020/02/25 v2.8b A comprehensive (SI) units package
+ (d:/texlive/2020/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2000/06/29 v2.01 AMS text
+ (d:/texlive/2020/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks16
+\ex@=\dimen138
+)) (d:/texlive/2020/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2020-03-06 LaTeX2e option processing using LaTeX3 keys
+)
+\l__siunitx_tmp_box=\box48
+\l__siunitx_tmp_dim=\dimen139
+\l__siunitx_tmp_int=\count182
+\l__siunitx_number_mantissa_length_int=\count183
+\l__siunitx_number_uncert_length_int=\count184
+\l__siunitx_round_int=\count185
+\l__siunitx_process_decimal_int=\count186
+\l__siunitx_process_uncertainty_int=\count187
+\l__siunitx_process_fixed_int=\count188
+\l__siunitx_process_integer_min_int=\count189
+\l__siunitx_process_precision_int=\count190
+\l__siunitx_group_min_int=\count191
+\l__siunitx_angle_marker_box=\box49
+\l__siunitx_angle_unit_box=\box50
+\l__siunitx_angle_marker_dim=\dimen140
+\l__siunitx_angle_unit_dim=\dimen141
+\l__siunitx_unit_int=\count192
+\l__siunitx_unit_denominator_int=\count193
+\l__siunitx_unit_numerator_int=\count194
+\l__siunitx_unit_prefix_int=\count195
+\l__siunitx_unit_prefix_base_int=\count196
+\l__siunitx_unit_prefix_gram_int=\count197
+\l__siunitx_number_product_int=\count198
+\c__siunitx_one_fill_skip=\skip51
+\l__siunitx_table_unit_align_skip=\skip52
+\l__siunitx_table_exponent_dim=\dimen142
+\l__siunitx_table_integer_dim=\dimen143
+\l__siunitx_table_mantissa_dim=\dimen144
+\l__siunitx_table_marker_dim=\dimen145
+\l__siunitx_table_result_dim=\dimen146
+\l__siunitx_table_uncert_dim=\dimen147
+\l__siunitx_table_fill_pre_dim=\dimen148
+\l__siunitx_table_fill_post_dim=\dimen149
+\l__siunitx_table_fill_mid_dim=\dimen150
+\l__siunitx_table_pre_box=\box51
+\l__siunitx_table_post_box=\box52
+\l__siunitx_table_mantissa_box=\box53
+\l__siunitx_table_result_box=\box54
+\l__siunitx_table_number_align_skip=\skip53
+\l__siunitx_table_text_align_skip=\skip54
+ (d:/texlive/2020/texmf-dist/tex/latex/translator/translator.sty
+Package: translator 2019-05-31 v1.12a Easy translation of strings in LaTeX
+ (d:/texlive/2020/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+))) (d:/Undergraduate/thesis/textidote/t.aux)
+\openout1 = `t.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 9.
+LaTeX Font Info:    ... okay on input line 9.
+ (d:/texlive/2020/texmf-dist/tex/latex/translator/translator-basic-dictionary-English.dict
+Dictionary: translator-basic-dictionary, Language: English 
+) (d:/texlive/2020/texmf-dist/tex/latex/siunitx/siunitx-abbreviations.cfg
+File: siunitx-abbreviations.cfg 2017/11/26 v2.7k siunitx: Abbreviated units
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 9.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 9.
+ [1
+
+{d:/texlive/2020/texmf-var/fonts/map/pdftex/updmap/pdftex.map}] (d:/Undergraduate/thesis/textidote/t.aux) ) 
+Here is how much of TeX's memory you used:
+ 3830 strings out of 482503
+ 95423 string characters out of 5950824
+ 324112 words of memory out of 5000000
+ 19501 multiletter control sequences out of 15000+600000
+ 534055 words of font info for 31 fonts, out of 8000000 for 9000
+ 36 hyphenation exceptions out of 8191
+ 36i,8n,46p,239b,220s stack positions out of 5000i,500n,10000p,200000b,80000s
+<d:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb><d:/texlive/2020/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb>
+Output written on d:/Undergraduate/thesis/textidote/t.pdf (1 page, 31083 bytes).
+PDF statistics:
+ 16 PDF objects out of 1000 (max. 8388607)
+ 10 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+

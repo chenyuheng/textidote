@@ -267,6 +267,7 @@ public class AnnotatedString
 		int col_offset = p.getColumn() - r.getStart().getColumn();
 		Position p_source_start = r_source.getStart();
 		Position out_p = new Position(p_source_start.getLine(), p_source_start.getColumn() + col_offset);
+
 		return out_p;
 	}
 

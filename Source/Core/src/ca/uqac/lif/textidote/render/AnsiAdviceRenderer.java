@@ -86,6 +86,13 @@ public class AnsiAdviceRenderer extends AdviceRenderer
 					m_printer.println();
 					m_printer.setForegroundColor(Color.WHITE);
 					renderExcerpt(ad.getLine(), ad.getRange());
+					if (ad.getSuggestions() != null) {
+						List<String> sug = ad.getSuggestions();
+						m_printer.print("Suggestions:\n");
+						for (String su : sug) {
+							m_printer.println("\t\t" + su);
+						}
+					}
 				}
 			}
 		}

@@ -56,6 +56,7 @@ import ca.uqac.lif.textidote.rules.CheckNumberWords;
 import ca.uqac.lif.textidote.rules.CheckStackedHeadings;
 import ca.uqac.lif.textidote.rules.CheckSubsectionSize;
 import ca.uqac.lif.textidote.rules.CheckSubsections;
+import ca.uqac.lif.textidote.rules.CheckTabularNumber;
 import ca.uqac.lif.textidote.rules.LanguageFactory;
 import ca.uqac.lif.textidote.rules.RegexRule;
 import ca.uqac.lif.util.AnsiPrinter;
@@ -629,6 +630,10 @@ public class Main
 					c_cleaner.add(latex_cleaner);
 					linter = new Linter(c_cleaner);
 					populateLatexRules(linter);
+					if (map.hasOption("check"))
+					{
+						linter.addCleaned(new CheckNumberWords(LanguageFactory.getLanguageFromString(lang_s)));
+					}
 					linter.addToBlacklist(rule_blacklist);
 				}
 				if (!lang_s.isEmpty())
@@ -733,8 +738,9 @@ public class Main
 		linter.add(new CheckSubsectionSize());
 		linter.add(new CheckStackedHeadings());
 		linter.add(new CheckNoBreak());
-		linter.add(new CheckNumberWords());
+
 		linter.add(new CheckCiteMix());
+		linter.add(new CheckTabularNumber());
 	}
 
 	/**

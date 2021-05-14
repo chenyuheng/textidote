@@ -126,7 +126,9 @@ public class RegexRule extends Rule
 				r = new Range(source_start_pos, source_end_pos);
 			}
 			assert r != null;
-			out_list.add(new Advice(this, r, message, s.getResourceName(), original_line, original.getOffset(source_start_pos)));
+			List<String> sug = new ArrayList<String>();
+			sug.add("Table~\\ref");
+			out_list.add(new Advice(this, r, message, s.getResourceName(), original_line, original.getOffset(source_start_pos), sug));
 			pos = new Position(start_pos.getLine(), start_pos.getColumn() + match.getMatch().length());;
 		}
 		return out_list;
